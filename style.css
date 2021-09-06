@@ -1,0 +1,10 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 1.6rem;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
