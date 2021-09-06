@@ -2,9 +2,42 @@
     padding: 0;
     margin: 0;
     font-size: 1.6rem;
+    color: black;
+    text-shadow: white 1px 1px;
 }
 .container{
     width: 100vw;
     height: 100vh;
     background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainContent{
+    width: 40vw;
+    height: auto;
+    background-image: linear-gradient(to right bottom, #fafafa50 0%, #02020250 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.heading{
+    padding: 2rem;
+}
+.mainInformation{
+    display: flex;
+    width: 100%;
+}
+.temp{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 5;
+}
+.tempMoreInformation{
+    flex-grow: 1;
+}
+.wind, .clouds{
+    padding: 1rem;
 }
