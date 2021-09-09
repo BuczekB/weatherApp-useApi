@@ -1,43 +1,125 @@
 *{
     padding: 0;
     margin: 0;
-    font-size: 1.6rem;
-    color: black;
-    text-shadow: white 1px 1px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
 }
 .container{
     width: 100vw;
     height: 100vh;
-    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: url('./img/bg-sun.jpg');
+    background-position: center;
+}
+.search{
+    width: 35vw;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.3rem;
+}
+.search input{
+    text-align: center;
+    font-size: 1.3rem;
+    border-radius: 3rem;
+    background: rgba(0, 0, 0, 0.1);
+    color: white;
+    border: 2px black solid;
+    outline: none;
+}
+.search input:focus{
+    background: #ffffff;
+    color: black;
+}
+.search input::placeholder {
+    color: white;
+}
+.search button{
+    width: 2.5vw;
+    height: 2.5vw;
+    padding: .5rem;
+    margin: 0.3rem;
+    color: white;
+    font-size: 1.3rem;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px black solid;
+}
+.search button:hover{
+    cursor: pointer;
+    color: black;
+    background: white;
+    
+
+}
+.search button:hover .iconSearch{
+    color: black;
+}
+.search button:hover .iconStar{
+    color: gold;
 }
 .mainContent{
     width: 40vw;
     height: auto;
-    background-image: linear-gradient(to right bottom, #fafafa50 0%, #02020250 100%);
+    background: rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to right bottom , rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-shadow: 1px 1px black;
+    border-radius: 10%;
 }
 .heading{
-    padding: 2rem;
+    padding: 1rem;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-size: 4rem;
+    text-shadow: 3px 3px black;
 }
+.cityName{
+    text-transform: uppercase;
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
+}
+
 .mainInformation{
     display: flex;
     width: 100%;
 }
 .temp{
     padding: 1rem;
+    font-size: 1.6rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-grow: 5;
+    flex-grow: 4;
 }
-.tempMoreInformation{
-    flex-grow: 1;
+.teampOne{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.wind, .clouds{
+.tempMoreInformation, .wind{
+    flex-grow: 2;
+    font-size: 1.2rem;
+    align-self: center;
+}
+.wind{
+    margin-top: .5rem;
+}
+.clouds, .sunRise, .sunSet{
     padding: 1rem;
 }
+.sun{
+    display: flex;
+}
+
+
+
+

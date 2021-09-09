@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <title>Weather App</title>
 </head>
@@ -11,26 +14,68 @@
 <body>
     <div class="container">
         <div class="mainContent">
+            <div class="search">
+                <input class="searchInput" placeholder="Search" type="text">
+                <button class="searchButton">
+                    <i class="material-icons iconSearch">search</i>
+                </button>
+                <button class="randomButton">
+                    <i class="material-icons iconStar">star</i>
+                </button>
+            </div>
             <div class="heading">
-                <h1>
-                    Lublin
-                </h1>
+
+                <span class="cityName">
+                    <h1>Lublin</h1>
+                </span>
             </div>
             <div class="mainInformation">
                 <div class="temp">
-                    <h2>Temp : 24 'C</h2>
+                    <div class="teampOne">
+                        Temp :
+                        <span class="tempText"> 24 </span>
+                        'C
+                        <img src="" class=" tempImg">
+                    </div>
+                    <div class="tempTwo">
+                        <div class="clouds">
+                            Clouds :
+                            <span class="cloudsInfo"> 2.2 </span>
+                        </div>
+                    </div>
                 </div>
                 <div class="tempMoreInformation">
-                    <div class="tempInfo">Feels like : 27 'C</div>
-                    <div class="tempInfo">Temp max : 29 'C</div>
-                    <div class="tempInfo">Temp min : 21 'C</div>
+                    <div class="tempInfo">
+                        Feels like :
+                        <span class="tempFeels"> 27 </span>
+                        'C
+                    </div>
+                    <div class="tempInfo">
+                        Temp max :
+                        <span class="tempMax"> 29 </span>
+                        'C
+                    </div>
+                    <div class="tempInfo">
+                        Temp min :
+                        <span class="tempMin"> 21 </span>
+                        'C
+                    </div>
+                    <div class="wind">
+                        Wind speed :
+                        <span class="windSpeed"> 2.2 </span>
+                        km\h
+                    </div>
                 </div>
             </div>
-            <div class="wind">
-                <h2>Wind speed : 2.2</h2>
-            </div>
-            <div class="clouds">
-                <h2>Clouds : NO</h2>
+            <div class="sun">
+                <div class="sunRise">
+                    SunRise :
+                    <span class="sunRiseS"> 2.2 </span>
+                </div>
+                <div class="sunSet">
+                    SunSet:
+                    <span class="sunSetS"> 2.2 </span>
+                </div>
             </div>
         </div>
     </div>
