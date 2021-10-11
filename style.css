@@ -119,7 +119,146 @@
 .sun{
     display: flex;
 }
+.switch{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    width: 60px;
+    height: 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+.switch::before{
+    content: '';
+    top: 0;
+    right: 0;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+    transform: scale(0.9);
+    transition: ease-in .2s;
+}
+.switch:hover::before{
+    right: calc(100% - 20px);
+}
 
+@media (min-width:1231px){
+    .mainContent{
+        width: 50vw;
+        height: auto;
+    }
+    .search button{
+        border-radius: 50%;
+        
+    }
+       .searchInput{
+        width: 254px;
+        height: 3vw;
+    }
+    .search button{
+        border-radius: 50%;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+       .icon{
+         font-size: 1rem; 
+       }
+       .search{
+           
+           align-items: center;
+           flex-direction: row;
+       }
+       .buttons{
+           display: flex;
+           justify-content: center;
+           align-items: center; 
+       }
+}
 
+@media (max-width: 1230px){
+    *{
+        font-size: 1.2rem;
+    }
+    .mainContent{
+        width: 60vw;
+        height: auto;
+    }
+    .searchInput{
+        width: 254px;
+        height: 54px;
+    }
+    .buttons{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .search button{
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+    }
+    .icon{
+        font-size: 1rem; 
+      }
+    
+}
+@media (max-width:1024px){
+    *{
+        font-size: 1rem;
+    }
+    .mainContent{
+        width: 60vw;
+        height: auto;
+    }
+    .search{
+        flex-direction: column;
+        align-items: center;
+    }
+    .buttons{
+        display: flex;
+        justify-content: center;
+    }
+    .search button{
+        border-radius: 0%;
+        width: 10vw;
+        height: auto;
+    }
 
-
+   
+}
+@media (max-width:768px){
+    *{
+        font-size: .8rem;
+    }
+   .heading{
+       font-size: 1rem;
+   }
+   .mainContent{
+       width: 90vw;
+       height: auto;
+   }
+   .temp{
+       padding: 0;
+   }
+   .tempimg{
+       width: 50px;
+       height: auto;
+   }
+   .search button{
+    border-radius: 0%;
+    width: 10vw;
+    height: auto;
+   }
+   .icon{
+     font-size: 1rem; 
+   }
+   .search{
+       flex-direction: column;
+   }
+   .buttons{
+       display: flex;
+       justify-content: center;
+   }
+}

@@ -16,16 +16,36 @@ const searchInput = document.querySelector('.searchInput');
 const searchBtton = document.querySelector('.searchButton');
 const randomButton = document.querySelector('.randomButton');
 
+const container = document.querySelector('.container');
+
+
+
+
 const tempImg = document.querySelector('.tempImg');
 
-const citys = ["TOKYO ", "SEOUL ", "MEXICO CITY", "Mumbai", "Delhi", "New York", "DŻAKARTA", "Sao Paulo", "MANILA", "Los Angeles", "Szanghaj",]
+const citys = ["TOKYO ", "SEOUL ", "MEXICO CITY", "Mumbai", "Delhi", "New York", "DŻAKARTA", "Sao Paulo", "MANILA", "Los Angeles", "Szanghaj",];
+const weatherInfo = {
+    temp: '',
+    name: '',
+    iconId: '',
+    tempMain: '',
+    tempFeels: '',
+    tempMax: '',
+    tempMin: '',
+    windSpeed: '',
+    cloudsInfo: '',
+}
 let test = []
+let numberBG = Math.floor(Math.random() * 2);
+
+
 
 
 const randomCity = () => {
     const randomNumber = Math.floor(Math.random() * 12);
     const city = citys[randomNumber];
     weather.fatchWeather(city)
+    console.log(city);
 }
 
 
@@ -39,13 +59,60 @@ const enterCity = () => {
 
 searchBtton.addEventListener('click', enterCity);
 
+const changeBackground = () => {
 
+    const temperature = test.main.temp;
+    let randombg = Math.floor(Math.random() * 4 + 1);
+
+
+
+    const sunnyDay = [
+        "url('./img/imgSunnyDay/bgSunny-1.jpg')",
+        "url('./img/imgSunnyDay/bgSunny-2.jpg')",
+        "url('./img/imgSunnyDay/bgSunny-3.jpg')",
+        "url('./img/imgSunnyDay/bgSunny-4.jpg')",
+    ]
+
+    if (temperature < 10) {
+        container.style.backgroundImage = "url('./img/bg-3.jpg')";
+        console.log('work1');
+        console.log(test.main.temp);
+        return
+    }
+    if (temperature < 18) {
+        container.style.backgroundImage = "url('./img/bg-chilly.jpg')";
+        console.log('work2');
+        console.log(test.main.temp);
+        return
+    }
+    if (temperature < 26) {
+        container.style.backgroundImage = "url('./img/bg-4.jpg')";
+        console.log('work3');
+        console.log(test.main.temp);
+        return
+    }
+    if (temperature < 32) {
+        container.style.backgroundImage = sunnyDay[randombg];
+        console.log('work4');
+        console.log(test.main.temp);
+        return
+    }
+    if (temperature > 34) {
+        container.style.backgroundImage = "url('./img/bg-hot.jpg')";
+        console.log('work5');
+        console.log(test.main.temp);
+        return
+    }
+}
 
 const enterDate = () => {
+
+    const temperature = test.main.temp;
+
     cityName.innerHTML = test.name
     const iconId = test.weather[0].icon
     tempImg.src = `https://openweathermap.org/img/wn/${iconId}@2x.png`
-    tempMain.innerHTML = test.main.temp
+    tempMain.innerHTML = temperature
     tempFeels.innerHTML = test.main.feels_like
     tempMax.innerHTML = test.main.temp_max
     tempMin.innerHTML = test.main.temp_min
@@ -62,6 +129,8 @@ const enterDate = () => {
     const timestrSet = dateS.toLocaleTimeString();
     sunSetS.innerHTML = timestrSet
 
+
+    changeBackground()
 }
 
 
