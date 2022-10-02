@@ -55,6 +55,9 @@
     
 
 }
+.search button:hover .buttonSvg{
+    fill: black;
+}
 .search button:hover .iconSearch{
     color: black;
 }
@@ -119,30 +122,7 @@
 .sun{
     display: flex;
 }
-.switch{
-    position: absolute;
-    top: 5%;
-    right: 5%;
-    width: 60px;
-    height: 20px;
-    border: 2px solid black;
-    border-radius: 20px;
-}
-.switch::before{
-    content: '';
-    top: 0;
-    right: 0;
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: black;
-    transform: scale(0.9);
-    transition: ease-in .2s;
-}
-.switch:hover::before{
-    right: calc(100% - 20px);
-}
+
 
 @media (min-width:1231px){
     .mainContent{
@@ -222,7 +202,7 @@
     }
     .search button{
         border-radius: 0%;
-        width: 10vw;
+        width: 5vw;
         height: auto;
     }
 
@@ -248,7 +228,7 @@
    }
    .search button{
     border-radius: 0%;
-    width: 10vw;
+    width: 5vw;
     height: auto;
    }
    .icon{
