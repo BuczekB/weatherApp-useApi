@@ -13,6 +13,7 @@
     align-items: center;
     background-image: url('./img/bg-sun.jpg');
     background-position: center;
+    background-size: cover;
 }
 .search{
     width: 35vw;
@@ -241,4 +242,20 @@
        display: flex;
        justify-content: center;
    }
+}
+@media (max-width:500px){
+    *{
+        font-size: 0.82rem;
+    }
+    .search button{
+        border-radius: 0%;
+        width: 15vw;
+        height: auto;
+       }
+       .mainContent{
+        width: 80vw;
+        height: auto ;
+    }
+    
+    
 }
